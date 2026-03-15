@@ -1,6 +1,8 @@
 # Driver-drowsiness-MP_5
-This project develops an AI-based system that detects driver fatigue using deep learning and image analysis.
 
+PROJECT TITLE : Driver Drowsiness Detection using Eye Closure and Yawning Analysis with Deep Learning. 
+
+*This project develops an AI-based system that detects driver fatigue using deep learning and image analysis*.
 
 Introduction
 
