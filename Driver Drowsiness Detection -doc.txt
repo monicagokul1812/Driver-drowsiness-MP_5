@@ -1,0 +1,135 @@
+Driver Drowsiness Detection using Deep Learning
+Introduction:
+
+Driver drowsiness is one of the major causes of road accidents. When drivers become sleepy, their reaction time and attention decrease.
+
+This project develops an AI-based system that detects driver fatigue using deep learning and image analysis.
+
+The system analyzes driver facial images (eye and mouth states) and predicts whether the driver is alert or drowsy.
+
+
+
+Objectives:
+
+Detect driver fatigue using deep learning models
+Analyze eye closure and yawning patterns
+Build a CNN model and MobileNetV2 transfer learning model
+Classify driver state into multiple categories
+Improve road safety using AI
+
+
+Dataset Description:
+
+driver facial images categorized into four classes:
+
+Class	Meaning
+Open	Eyes open (alert driver)
+Closed	Eyes closed (possible drowsiness)
+Yawn	Driver yawning
+No_yawn	Driver not yawning
+
+
+Project Workflow:
+
+Dataset Upload
+        ↓
+Dataset Extraction
+        ↓
+Dataset Exploration (EDA)
+        ↓
+Data Preprocessing
+        ↓
+Train-Test Split
+        ↓
+Data Augmentation
+        ↓
+CNN Model Training
+        ↓
+MobileNetV2 Transfer Learning
+        ↓
+Model Evaluation
+        ↓
+Driver Drowsiness Prediction
+
+
+Dataset Extraction:
+
+uses:
+
+Unzip the dataset
+Make images accessible for training.
+
+
+Dataset Exploration (EDA)
+
+Understand dataset balance
+Verify data quality
+
+Dataset Splitting :
+
+| Dataset    | Percentage |
+| ---------- | ---------- |
+| Training   | 70%        |
+| Validation | 15%        |
+| Test       | 15%        |
+
+Training set → train model
+Validation set → tune model
+Test set → final performance evaluation.
+
+
+Data Preprocessing:
+
+Improve model generalization and prevent overfitting.
+
+CNN Model :
+
+| Layer      | Purpose                               |
+| ---------- | ------------------------------------- |
+| Conv2D     | Detect features like edges and shapes |
+| MaxPooling | Reduce image dimensions               |
+| Flatten    | Convert features to vector            |
+| Dense      | Classification layer                  |
+| Dropout    | Reduce overfitting                    |
+
+
+CNN learns patterns such as:
+
+Eye closure
+Mouth opening
+Facial fatigue patterns
+
+
+Transfer Learning (MobileNetV2):preptrained deep learning model
+
+Faster training
+Higher accuracy
+Uses features learned from large datasets
+
+Model Training :
+
+Training process:
+
+Model learns image features
+Loss decreases
+Accuracy increases
+
+Training outputs :
+
+Training accuracy
+Validation accuracy
+Loss curves
+test accuracy: 0.9839 - loss: 0.0383
+
+              precision    recall   f1-score    support
+
+
+      Closed       1.00      1.00      1.00       109
+        Open       1.00      1.00      1.00       109
+     no_yawn       0.97      0.96      0.97       109
+        yawn       0.96      0.97      0.97       109
+
+    accuracy                           0.98       436
+   macro avg       0.98      0.98      0.98       436
+weighted avg       0.98      0.98      0.98       436
+
